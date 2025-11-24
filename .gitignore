@@ -1,0 +1,16 @@
+# Minecraft server data directory
+data/
+
+# Backup files
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

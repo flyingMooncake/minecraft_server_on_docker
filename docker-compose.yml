@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      TYPE: "VANILLA"
+      VERSION: "LATEST"
+      MEMORY: "2G"
+      SERVER_NAME: "My Minecraft Server"
+      MOTD: "Welcome to my Minecraft server!"
+      DIFFICULTY: "normal"
+      MODE: "survival"
+      PVP: "true"
+      MAX_PLAYERS: "20"
+      VIEW_DISTANCE: "10"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "minecraft"
+      RCON_PORT: "25575"
+    volumes:
+      - ./data:/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
