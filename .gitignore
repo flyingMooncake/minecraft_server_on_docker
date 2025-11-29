@@ -1,5 +1,6 @@
 # Minecraft server data directory
-data/
+data/*
+!data/server.properties
 
 # Backup files
 *.tar.gz
